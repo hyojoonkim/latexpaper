@@ -1,0 +1,87 @@
+
+%%%%%%%%%%%%%%%%
+%%% EPS FIGURE
+%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+%\centering\includegraphics[width=0.98\linewidth]{figures/vis.eps}
+\caption{Static command clustering.
+\textmd{small text.}}
+\label{fig:statemachine}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%
+%%% Table
+%%%%%%%%%%%%%%%%
+\begin{table}[t] 
+\begin{center}
+\begin{small}
+\begin{tabular}{l|c|c|c|c} 
+& \em Routers & \em Firewalls & \em Switches & {\em Total}  \\ \hline
+Georgia Tech & 16 & 365 & 716 & 1097 \\
+Wisconsin & 53 & 325 & 1246 & 1624 \\
+\end{tabular} 
+\caption{\bf Number of devices for each device type.}
+\label{tab:sample_network} 
+\end{small}
+\end{center}
+\end{table}
+
+
+
+%%%%%%%%%%%%%%%%
+%%% Itemize
+%%%%%%%%%%%%%%%%
+\begin{itemize}
+\itemsep=-1pt
+\item Inspection of configuration from devices.
+\item Revision control of configuration files from devices.
+\item Pushing configuration to devices. Batch the command.
+\item Logging of events and changes in devices.
+\item Audits about how, when, where and by whom did changes occur. 
+\item Help centralize management, including access control to devices.
+\item Batch update and upgrade of device firmware.
+\item Simple rollback mechanism when fault occurs.
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%
+%%% Code
+%%%%%%%%%%%%%%%%
+\lstdefinelanguage{CVS}
+{keywords={log, text, @}, sensitive=true, alsoletter={-}}
+
+\begin{figure}[t]
+\lstset{emph={port-object, object-group},
+  emphstyle=\color{blue}{\sffamily}}
+\lstset{language=CVS}
+\centering
+\begin{minipage}{0.9\linewidth}
+\begin{lstlisting}
+... 
+1.51
+log
+@Fri Feb  5 15:04:28 EST 2010
+@
+text
+@a141 1
+ port-object range bootps bootpc
+a160 4
+object-group service 12-123-12-13-any-udp udp
+ port-object range bootps bootpc
+object-group service 12-123-12-14-any-udp udp
+ port-object range bootps bootpc
+d173 16
+a188 9
+object-group service 13-14-15-16-any-udp udp
+ port-object range bootps bootpc
+object-group service 14-15-16-17-any-udp udp
+...
+@
+\end{lstlisting}
+\end{minipage}
+\caption{RCS file showing changes to network configuration.\label{fig:rcs_file}}
+\end{figure}
+

@@ -1,0 +1,88 @@
+\documentclass{sig-alternate-pretty-10pt}
+\usepackage[margin=10pt,font=small,labelfont=bf]{caption}
+\usepackage{amsmath, amssymb,alltt}
+\usepackage{epsfig,url,tabularx,theorem,amsmath,amssymb,psfrag,graphics,times,multirow,color}
+\usepackage{listings}
+\usepackage{cite}
+\usepackage{balance}
+\usepackage{subfig}
+%\usepackage{caption}
+
+\newcommand{\xxx}[1]{\textcolor{red}{#1}}
+\newcommand{\aditya}[1]{\textcolor{blue}{}}
+\newcommand{\fp}{\vspace*{0.05in}\noindent}
+\newcommand{\ea}{{\it et al.}}
+\newcommand{\eg}{{\it e.g.}} 
+\newcommand{\ie}{{\it i.e.}} 
+\newcommand{\name}{BISMark}
+
+\renewcommand{\paragraph}[1]{\vspace*{0.1in}\noindent{\bf #1.}}
+\newcommand{\paragraphn}[1]{\vspace*{0.1in}\noindent{\bf #1}}
+
+\newcommand{\supsym}[1]{\raisebox{4pt}{{\footnotesize #1}}}
+\newcommand{\gt}{\supsym{$\dag$}}
+\newcommand{\wisc}{\supsym{$\ast$}}
+\newcommand{\nap}{\supsym{$\ddag$}}
+\newcommand{\sk}{\supsym{$\star$}}
+
+\lstset{
+basicstyle=\scriptsize,
+frame=single,
+numbers=left,
+stringstyle=\ttfamily,
+breaklines=true
+}
+
+
+% by Joon
+%
+\usepackage{paralist}
+
+\newcommand{\gtech}{{\it GT}}
+\newcommand{\uw}{{\it UW}}
+
+\newcommand{\lya}{{\it l1}}
+\newcommand{\lyb}{{\it l2}}
+\newcommand{\lyc}{{\it l3}}
+\newcommand{\vlan}{{\it vlan}}
+\newcommand{\acl}{{\it acl}}
+\newcommand{\mgt}{{\it mgt}}
+\newcommand{\secu}{{\it sec}}
+\newcommand{\cflt}{{\it cflt}}
+\newcommand{\qos}{{\it qos}}
+
+\interfootnotelinepenalty 100000
+
+\newenvironment{pitem}{
+ \begin{itemize}
+ \setlength{\itemsep}{1pt}
+ \setlength{\parskip}{0pt}
+ \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+
+\hyphenation{applicat-ion-agnostic speeds main-tains next ge-ne-ral bits all scans o-pe-ra-tions be-co-ming Mbytes a-lar-ming two ea-si-ly prob-lems pro-ba-bi-li-ty small Snort rou-ters count sen-ders dif-fe-rent con-si-der al-go-rithms bit-maps di-rect dif-fer-ence smal-lest slow di-rec-tions space u-sage app-li-ca-tion bit-map class-if-ic-ation in-cre-men-ted switch-es}
+
+\begin{document}
+ 
+
+\title{Put Title\\}
+\author{Hyojoon Kim\gt, Nick Feamster\gt\\
+\gt~\affaddr{Georgia Institute of Technology}} 
+
+%\wisc~\affaddr{University of Wisconsin}
+
+\newcounter{Lcount}
+\maketitle
+
+\begin{sloppypar}
+\input{abstract}
+\input{intro}
+
+\begin{small}
+\bibliographystyle{abbrv}
+\bibliography{biblio/ref,biblio/rfc,biblio/own}
+\end{small}
+\end{sloppypar}
+
+\end{document}

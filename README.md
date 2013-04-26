@@ -1,2 +1,3 @@
-===== LateX Paper Writing Template
+---- LateX Paper Writing Template
+
 
